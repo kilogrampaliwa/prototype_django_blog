@@ -1,24 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
-      <div class="container py-1"><a class="navbar-brand text-sm fw-bold text-dark" href="index.html">Bootstrap Blog</a>
+      <div class="container py-1"><a class="navbar-brand text-sm fw-bold text-dark" href = "{% static 'index.html' %}">Bootstrap Blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-            <li class="nav-item"><a class="nav-link " href="index.html">Home</a>
+            <li class="nav-item"><a class="nav-link " href = "{% static 'index.html' %}">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a>
+            <li class="nav-item"><a class="nav-link " href = "{% static 'blog.html' %}">Blog</a>
             </li>
-            <li class="nav-item"><a class="nav-link " href="post.html">Post</a>
+            <li class="nav-item"><a class="nav-link " href = "{% static 'post.html' %}">Post</a>
             </li>
-            <li class="nav-item"><a class="nav-link " href="#">Contact</a>
+            <li class="nav-item"><a class="nav-link " href = "{% static '#' %}">Contact</a>
             </li>
             <li class="nav-item mt-2 mt-lg-0">
               <ul class="list-inline d-flex align-items-center">
-                <li class="list-inline-item mx-lg-2 px-2 border-start border-end"><a class="search-btn nav-link small py-0 text-dark" href="#"><i class="fas fa-search"></i></a></li>
-                <li class="list-inline-item d-flex align-items-end small"><a class="text-dark" href="#">EN</a><span class="underscore mb-1"></span><a class="text-gray-500" href="#">ES</a></li>
+                <li class="list-inline-item mx-lg-2 px-2 border-start border-end"><a class="search-btn nav-link small py-0 text-dark" href = "{% static '#' %}"><i class="fas fa-search"></i></a></li>
+                <li class="list-inline-item d-flex align-items-end small"><a class="text-dark" href = "{% static '#' %}">EN</a><span class="underscore mb-1"></span><a class="text-gray-500" href = "{% static '#' %}">ES</a></li>
               </ul>
             </li>
           </ul>
@@ -41,13 +42,13 @@
       </div>
     </div>
     <!-- Hero Section-->
-    <section class="hero position-relative" style="background: url(img/hero.jpg); background-size: cover; background-position: center center">
+    <section class="hero position-relative" style="background: url({% static 'img/hero.jpg' %}); background-size: cover; background-position: center center">
       <div class="container text-white py-5">
         <div class="row py-lg-5">
           <div class="col-lg-7">
-            <h1>Bootstrap 5 Blog - A free template by Bootstrapious</h1><a class="link-underline mt-3" href="#!">Discover More</a>
+            <h1>Bootstrap 5 Blog - A free template by Bootstrapious</h1><a class="link-underline mt-3" href = "{% static '#!' %}">Discover More</a>
           </div>
-        </div><a class="continue text-gray-400 position-absolute bottom-0 mb-5 z-index-20 link-transition small text-uppercase" href="#intro"><i class="fas fa-long-arrow-alt-down"></i> Scroll Down</a>
+        </div><a class="continue text-gray-400 position-absolute bottom-0 mb-5 z-index-20 link-transition small text-uppercase" href = "{% static '#intro' %}"><i class="fas fa-long-arrow-alt-down"></i> Scroll Down</a>
       </div>
     </section>
     <!-- Intro Section-->
@@ -69,37 +70,37 @@
             <div class="text-inner d-flex align-items-center h-100 bg-light">
               <div class="content px-4 px-lg-5">
                 <ul class="list-inline mb-1">
-                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href="!#">Business</a></li>
-                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href="!#">Technology</a></li>
+                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href = "{% static '!#' %}">Business</a></li>
+                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href = "{% static '!#' %}">Technology</a></li>
                 </ul>
-                <h2 class="h4 mb-3"><a class="text-dark" href="post.html">Alberto Savoia Can Teach You About Interior</a></h2>
+                <h2 class="h4 mb-3"><a class="text-dark" href = "{% static 'post.html' %}">Alberto Savoia Can Teach You About Interior</a></h2>
                 <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                 <ul class="list-inline list-separated text-gray-500 mb-0">
-                  <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
-                      <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-1.jpg" alt="..."/></div><small>John Doe</small></a></li>
+                  <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href = "{% static '!#' %}">
+                      <div class="avatar flex-shrink-0"><img class="img-fluid" src = "{% static 'img/avatar-1.jpg' %}" alt="..."/></div><small>John Doe</small></a></li>
                   <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
                   <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-lg-5"><img class="img-fluid" src="img/featured-pic-1.jpeg" alt="..."></div>
+          <div class="col-lg-5"><img class="img-fluid" src = "{% static 'img/featured-pic-1.jpeg' %}" alt="..."></div>
         </div>
         <!-- Post        -->
         <div class="row d-flex align-items-stretch g-0">
-          <div class="col-lg-5"><img class="img-fluid" src="img/featured-pic-2.jpeg" alt="..."></div>
+          <div class="col-lg-5"><img class="img-fluid" src = "{% static 'img/featured-pic-2.jpeg' %}" alt="..."></div>
           <div class="col-lg-7">
             <div class="text-inner d-flex align-items-center h-100">
               <div class="content px-4 px-lg-5">
                 <ul class="list-inline mb-1">
-                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href="!#">Business</a></li>
-                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href="!#">Technology</a></li>
+                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href = "{% static '!#' %}">Business</a></li>
+                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href = "{% static '!#' %}">Technology</a></li>
                 </ul>
-                <h2 class="h4 mb-3"><a class="text-dark" href="post.html">Alberto Savoia Can Teach You About Interior</a></h2>
+                <h2 class="h4 mb-3"><a class="text-dark" href = "{% static 'post.html' %}">Alberto Savoia Can Teach You About Interior</a></h2>
                 <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                 <ul class="list-inline list-separated text-gray-500 mb-0">
-                  <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
-                      <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-2.jpg" alt="..."/></div><small>John Doe</small></a></li>
+                  <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href = "{% static '!#' %}">
+                      <div class="avatar flex-shrink-0"><img class="img-fluid" src = "{% static 'img/avatar-2.jpg' %}" alt="..."/></div><small>John Doe</small></a></li>
                   <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
                   <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
                 </ul>
@@ -113,30 +114,30 @@
             <div class="text-inner d-flex align-items-center h-100 bg-light">
               <div class="content px-4 px-lg-5">
                 <ul class="list-inline mb-1">
-                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href="!#">Business</a></li>
-                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href="!#">Technology</a></li>
+                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href = "{% static '!#' %}">Business</a></li>
+                  <li class="list-inline-item"><a class="text-uppercase text-dark small fw-bold" href = "{% static '!#' %}">Technology</a></li>
                 </ul>
-                <h2 class="h4 mb-3"><a class="text-dark" href="post.html">Alberto Savoia Can Teach You About Interior</a></h2>
+                <h2 class="h4 mb-3"><a class="text-dark" href = "{% static 'post.html' %}">Alberto Savoia Can Teach You About Interior</a></h2>
                 <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                 <ul class="list-inline list-separated text-gray-500 mb-0">
-                  <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href="!#">
-                      <div class="avatar flex-shrink-0"><img class="img-fluid" src="img/avatar-3.jpg" alt="..."/></div><small>John Doe</small></a></li>
+                  <li class="list-inline-item"><a class="d-flex align-items-center flex-wrap text-reset" href = "{% static '!#' %}">
+                      <div class="avatar flex-shrink-0"><img class="img-fluid" src = "{% static 'img/avatar-3.jpg' %}" alt="..."/></div><small>John Doe</small></a></li>
                   <li class="list-inline-item small"><i class="far fa-clock"></i> 2 months ago</li>
                   <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-lg-5"><img class="img-fluid" src="img/featured-pic-3.jpeg" alt="..."></div>
+          <div class="col-lg-5"><img class="img-fluid" src = "{% static 'img/featured-pic-3.jpeg' %}" alt="..."></div>
         </div>
       </div>
     </section>
     <!-- Divider Section-->
-    <section class="divider" style="background: url(img/divider-bg.jpg); background-size: cover; background-position: center bottom">
+    <section class="divider" style="background: url({% static 'img/divider-bg.jpg' %}); background-size: cover; background-position: center bottom">
       <div class="container text-white">
         <div class="row">
           <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2><a class="link-underline mt-3" href="#!">View More</a>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2><a class="link-underline mt-3" href = "{% static '#!' %}">View More</a>
           </div>
         </div>
       </div>
@@ -149,19 +150,19 @@
           <p class="text-lg fw-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </header>
         <div class="row gy-4">
-          <div class="col-md-4"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-1.jpg" alt="..."/></a>
-            <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2016</small><a class="small fw-bold text-uppercase small" href="!#">Business</a></div>
-            <h3 class="h4"><a class="text-dark" href="post.html">Ways to remember your important ideas</a></h3>
+          <div class="col-md-4"><a class="mb-3" href = "{% static 'post.html' %}"><img class="img-fluid" src = "{% static 'img/blog-1.jpg' %}" alt="..."/></a>
+            <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2016</small><a class="small fw-bold text-uppercase small" href = "{% static '!#' %}">Business</a></div>
+            <h3 class="h4"><a class="text-dark" href = "{% static 'post.html' %}">Ways to remember your important ideas</a></h3>
             <p class="text-muted text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
           </div>
-          <div class="col-md-4"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-2.jpg" alt="..."/></a>
-            <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2016</small><a class="small fw-bold text-uppercase small" href="!#">Technology</a></div>
-            <h3 class="h4"><a class="text-dark" href="post.html">Diversity in Engineering: Effect on Questions</a></h3>
+          <div class="col-md-4"><a class="mb-3" href = "{% static 'post.html' %}"><img class="img-fluid" src = "{% static 'img/blog-2.jpg' %}" alt="..."/></a>
+            <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2016</small><a class="small fw-bold text-uppercase small" href = "{% static '!#' %}">Technology</a></div>
+            <h3 class="h4"><a class="text-dark" href = "{% static 'post.html' %}">Diversity in Engineering: Effect on Questions</a></h3>
             <p class="text-muted text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
           </div>
-          <div class="col-md-4"><a class="mb-3" href="post.html"><img class="img-fluid" src="img/blog-3.jpg" alt="..."/></a>
-            <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2016</small><a class="small fw-bold text-uppercase small" href="!#">Financial</a></div>
-            <h3 class="h4"><a class="text-dark" href="post.html">Alberto Savoia Can Teach You About Interior</a></h3>
+          <div class="col-md-4"><a class="mb-3" href = "{% static 'post.html' %}"><img class="img-fluid" src = "{% static 'img/blog-3.jpg' %}" alt="..."/></a>
+            <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May | 2016</small><a class="small fw-bold text-uppercase small" href = "{% static '!#' %}">Financial</a></div>
+            <h3 class="h4"><a class="text-dark" href = "{% static 'post.html' %}">Alberto Savoia Can Teach You About Interior</a></h3>
             <p class="text-muted text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
           </div>
         </div>
@@ -189,13 +190,13 @@
     <!-- Gallery Section-->
     <section class="p-0">
       <div class="row g-0">
-        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href="img/gallery-1.jpg" data-gallery="gallery" data-glightbox="Gallery image 1"><img class="img-fluid" src="img/gallery-1.jpg" alt="image">
+        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href = "{% static 'img/gallery-1.jpg' %}" data-gallery="gallery" data-glightbox="Gallery image 1"><img class="img-fluid" src = "{% static 'img/gallery-1.jpg' %}" alt="image">
             <div class="fsc-hover-overlay"><i class="fas fa-search fsc-hover-overlay-icon"></i></div></a></div>
-        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href="img/gallery-2.jpg" data-gallery="gallery" data-glightbox="Gallery image 2"><img class="img-fluid" src="img/gallery-2.jpg" alt="image">
+        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href = "{% static 'img/gallery-2.jpg' %}" data-gallery="gallery" data-glightbox="Gallery image 2"><img class="img-fluid" src = "{% static 'img/gallery-2.jpg' %}" alt="image">
             <div class="fsc-hover-overlay"><i class="fas fa-search fsc-hover-overlay-icon"></i></div></a></div>
-        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href="img/gallery-3.jpg" data-gallery="gallery" data-glightbox="Gallery image 3"><img class="img-fluid" src="img/gallery-3.jpg" alt="image">
+        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href = "{% static 'img/gallery-3.jpg' %}" data-gallery="gallery" data-glightbox="Gallery image 3"><img class="img-fluid" src = "{% static 'img/gallery-3.jpg' %}" alt="image">
             <div class="fsc-hover-overlay"><i class="fas fa-search fsc-hover-overlay-icon"></i></div></a></div>
-        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href="img/gallery-4.jpg" data-gallery="gallery" data-glightbox="Gallery image 4"><img class="img-fluid" src="img/gallery-4.jpg" alt="image">
+        <div class="col-lg-3 col-sm-6"><a class="glightbox d-block position-relative" href = "{% static 'img/gallery-4.jpg' %}" data-gallery="gallery" data-glightbox="Gallery image 4"><img class="img-fluid" src = "{% static 'img/gallery-4.jpg' %}" alt="image">
             <div class="fsc-hover-overlay"><i class="fas fa-search fsc-hover-overlay-icon"></i></div></a></div>
       </div>
     </section>
@@ -206,7 +207,7 @@
             <p class="mb-0 fw-light text-sm">&copy; 2022. All rights reserved. Your great site.</p>
           </div>
           <div class="col-md-6 text-md-end">
-            <p class="mb-0 text-sm">Template By <a class="text-reset fw-light" href="https://bootstrapious.com/p/bootstrap-blog">Bootstrapious</a>
+            <p class="mb-0 text-sm">Template By <a class="text-reset fw-light" href = "{% static 'https://bootstrapious.com/p/bootstrap-blog' %}">Bootstrapious</a>
               <!-- Please do not remove the backlink to Bootstrap Temple unless you purchase an attribution-free license @ Bootstrap Temple or support us at http://bootstrapious.com/donate. It is part of the license conditions. Thanks for understanding :)                         -->
             </p>
           </div>
